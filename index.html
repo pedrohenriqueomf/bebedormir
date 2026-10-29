@@ -25,7 +25,7 @@
   button{font-family:inherit;cursor:pointer;border:0;background:none;color:inherit}
   img{max-width:100%;display:block}
   [hidden]{display:none!important}
-
+ 
   /* Topo */
   .topo{position:relative;background:var(--noite);color:var(--creme);padding:14px 16px;overflow:hidden}
   .topo .marca{position:relative;z-index:1;max-width:480px;margin:0 auto;display:flex;align-items:center;justify-content:center;gap:8px;font-weight:800;font-size:15px;letter-spacing:.2px}
@@ -34,7 +34,7 @@
   .estrela:nth-child(2n){width:2px;height:2px;animation-delay:1.2s}
   .estrela:nth-child(3n){animation-delay:2.1s}
   @keyframes brilho{0%,100%{opacity:.2}50%{opacity:.8}}
-
+ 
   /* Progresso */
   .progresso{max-width:480px;margin:0 auto;padding:12px 16px 4px;display:flex;align-items:center;gap:10px}
   .voltar{width:36px;height:36px;border-radius:50%;font-size:26px;line-height:1;color:var(--txt2);display:flex;align-items:center;justify-content:center;flex:none}
@@ -43,15 +43,15 @@
   .prog-info span{display:block;font-size:13px;font-weight:700;color:var(--txt2);margin-bottom:6px}
   .barra{height:6px;background:var(--lav2);border-radius:99px;overflow:hidden}
   .barra-fill{height:100%;width:0;background:var(--lav);border-radius:99px;transition:width .35s ease}
-
+ 
   /* Telas */
   .app{max-width:480px;margin:0 auto;padding:0 16px}
   .tela{display:none;padding:22px 0 32px}
   .tela.ativa{display:block;animation:entra .35s ease}
   @keyframes entra{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
-
+ 
   .selo{display:inline-block;background:var(--lav2);color:var(--noite);font-weight:800;font-size:13px;padding:6px 12px;border-radius:99px;letter-spacing:.3px}
-
+ 
   /* Capa */
   .capa{padding-top:18px;text-align:center}
   .capa h1{font-size:34px;margin:16px 0 12px}
@@ -59,16 +59,17 @@
   .capa .lua-grande{width:84px;height:84px;margin:6px auto 0}
   .capa .linha-mae{color:var(--txt2);font-size:15px;margin-top:16px}
   .link-sec{display:inline-block;margin-top:14px;color:var(--txt2);font-size:15px;text-decoration:underline}
-
+ 
   /* Botões */
   .btn{display:flex;align-items:center;justify-content:center;width:100%;min-height:58px;padding:14px 18px;background:var(--acao);color:#fff;font-weight:800;font-size:18px;border-radius:16px;text-decoration:none;text-align:center;box-shadow:0 6px 16px rgba(124,77,219,.35);transition:background .2s,transform .1s,opacity .2s}
   .btn:hover{background:var(--acao2)}
   .btn:active{transform:scale(.98)}
   .btn:disabled{opacity:.45;box-shadow:none;cursor:default}
   .micro{text-align:center;color:var(--txt2);font-size:13px;margin-top:10px}
-
+ 
   /* Pergunta */
   .pergunta h2,.nomes h2{font-size:26px;margin:10px 0 22px}
+  .selo-pilar{background:var(--acao);color:#fff;font-size:12px;letter-spacing:.5px;margin-top:6px}
   .opcoes{display:flex;flex-direction:column;gap:12px}
   .opcao{display:flex;align-items:center;gap:14px;width:100%;min-height:60px;padding:14px 16px;background:#fff;border:2px solid var(--lav2);border-radius:16px;text-align:left;font-size:17px;font-weight:700;color:var(--txt);box-shadow:var(--sombra);transition:border-color .15s,background .15s,transform .1s}
   .opcao:active{transform:scale(.98)}
@@ -81,7 +82,7 @@
   .btn-multi{margin-top:6px}
   .btn.incompleto{opacity:.55;box-shadow:none}
   @media (hover:hover){.opcao:hover{border-color:var(--lav)}}
-
+ 
   /* Nomes */
   .campo{margin-bottom:16px}
   .campo label,.campo .rot{display:block;font-weight:800;color:var(--noite);font-size:15px;margin-bottom:6px}
@@ -94,7 +95,7 @@
   .nomes .btn.incompleto{opacity:.55;box-shadow:none}
   .campo input.falta,.sexo.falta button{border-color:#E0453A}
   .erro-nomes{color:#C9372C;font-weight:700;font-size:15px;margin:-4px 0 8px}
-
+ 
   /* Gráfico */
   .grafico h2{font-size:23px;text-align:center;margin:8px 0 18px}
   .grafico-box{background:#fff;border-radius:var(--raio);box-shadow:var(--sombra);padding:14px 8px 8px}
@@ -106,14 +107,16 @@
   #gSvg.anim #gLinha{animation:desenha 1.5s ease .2s both}
   #gSvg.anim #gArea{animation:aparece .9s ease 1s both}
   #gSvg.anim .p1{animation:aparece .3s ease .2s both}
-  #gSvg.anim .p2{animation:aparece .3s ease .9s both}
-  #gSvg.anim .p3{animation:aparece .3s ease 1.6s both}
-  #gSvg.anim .voce{animation:aparece .4s ease 1.1s both}
+  #gSvg.anim .p2{animation:aparece .3s ease .7s both}
+  #gSvg.anim .p3{animation:aparece .3s ease 1.3s both}
+  #gSvg.anim .p4{animation:aparece .3s ease 1.7s both}
+  #gSvg .eixo-voce{fill:#C27A00}
+  #gSvg.anim .voce{animation:aparece .4s ease .9s both}
   @keyframes desenha{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}
   @keyframes aparece{from{opacity:0}to{opacity:1}}
-  .g-pergunta{font-weight:800;color:var(--noite);font-size:19px;line-height:1.35;margin:22px 0 6px}
+  .g-pergunta{font-weight:800;color:var(--noite);font-size:18px;line-height:1.4;text-align:center;margin:20px 0 18px}
   .g-sub{color:var(--txt2);margin-bottom:18px}
-
+ 
   /* Análise (barra de carregamento acima da VSL) */
   .analise-box{background:#fff;border-radius:var(--raio);box-shadow:var(--sombra);padding:16px 16px 14px;margin-bottom:16px}
   .analise-linha{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:10px}
@@ -128,13 +131,13 @@
   .analise-box.pronto #analisePct{color:var(--verde)}
   .btn-ver{display:block;width:100%;margin-top:12px;padding:12px;border-radius:14px;background:var(--lav2);color:var(--noite);font-weight:800;font-size:16px}
   .chamada-video{font-weight:800;color:var(--noite);text-align:center;margin:8px 0 12px}
-
+ 
   .vsl{width:100%;border-radius:var(--raio);overflow:hidden;background:#000}
   .vsl.ratio-169{position:relative;aspect-ratio:16/9}
   .vsl.ratio-916{position:relative;aspect-ratio:9/16;max-width:340px;margin:0 auto}
   .vsl.ratio-169 iframe,.vsl.ratio-916 iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
   .vsl-ph{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:#D9D9DE;color:#7A7A85;font-weight:800;letter-spacing:1px}
-
+ 
   /* Resultado */
   .resultado-bloco{margin-top:26px;animation:entra .45s ease}
   .resultado-bloco h1{font-size:27px;margin:14px 0 14px}
@@ -147,7 +150,7 @@
   .destaque{font-weight:700;color:var(--noite)}
   .chips{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 6px}
   .chip{background:#fff;border:1.5px solid var(--lav);color:var(--noite);font-weight:700;font-size:14px;padding:7px 12px;border-radius:99px}
-
+ 
   /* 3 passos (mesmos do vídeo) */
   .passos{margin:20px 0 6px;background:#fff;border-radius:var(--raio);box-shadow:var(--sombra);padding:18px 16px}
   .passos h3{font-size:20px;margin-bottom:12px}
@@ -160,9 +163,28 @@
   .passos li.alvo{border-color:var(--acao);background:var(--lav2)}
   .passos li.alvo .n{background:var(--acao);color:#fff}
   .passos li.alvo .trava{display:block}
+  .passos li{align-items:center}
+  .passos li > div{flex:1;min-width:0}
+  .passos li .motivo{display:block;font-size:13.5px;color:var(--txt2);line-height:1.3;margin-top:2px}
+  .passos li .tag{flex:none;font-size:12px;font-weight:800;padding:3px 9px;border-radius:99px}
+  .passos li.alvo .tag{background:var(--acao);color:#fff}
+  .passos li.ok .tag{background:#E5F4E4;color:#3E9A6A}
+  .passos li.ok{opacity:.75}
+  /* Ponte */
+  .ponte h2{font-size:24px;margin:10px 0 8px}
+  .pt-sub{color:var(--txt2);margin-bottom:18px}
+  .pt-lista{list-style:none;display:flex;flex-direction:column;gap:12px;margin-bottom:22px}
+  .pt-lista li{display:flex;align-items:center;gap:12px;background:#fff;border:2px solid var(--lav2);border-radius:16px;padding:14px;box-shadow:var(--sombra);opacity:.45;transition:opacity .3s,border-color .3s}
+  .pt-lista li .n{flex:none;width:32px;height:32px;border-radius:50%;background:var(--lav2);color:var(--noite);font-weight:800;display:flex;align-items:center;justify-content:center}
+  .pt-lista li b{flex:1;color:var(--noite);line-height:1.3}
+  .pt-st{flex:none;width:22px;height:22px;border-radius:50%;border:3px solid var(--lav2);border-top-color:var(--acao);animation:gira .8s linear infinite}
+  @keyframes gira{to{transform:rotate(360deg)}}
+  .pt-lista li.feito{opacity:1;border-color:var(--lav)}
+  .pt-lista li.feito .pt-st{animation:none;border:0;background:var(--acao);position:relative}
+  .pt-lista li.feito .pt-st::after{content:"";position:absolute;left:8px;top:4px;width:5px;height:10px;border:solid #fff;border-width:0 2.5px 2.5px 0;transform:rotate(45deg)}
   .passos .seta{text-align:center;color:var(--lav);font-size:14px;line-height:1;margin:-4px 0}
   .passos-nota{margin-top:12px;font-size:15.5px}
-
+ 
   /* Oferta */
   .oferta{margin-top:30px}
   .oferta h2{font-size:27px;text-align:center;margin-bottom:8px}
@@ -196,19 +218,19 @@
   .preco .de{color:var(--txt2);font-size:16px}
   .preco .de s{opacity:.8}
   .preco .valor{font-family:"Fraunces",Georgia,serif;font-size:54px;color:var(--noite);line-height:1.1;font-weight:600}
-
+ 
   /* Depoimentos */
   .depo h2{font-size:24px;text-align:center;margin:34px 0 14px}
   .carrossel{display:flex;align-items:flex-start;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding-bottom:8px;margin:0 -16px;padding-left:16px;padding-right:16px}
   .carrossel img{flex:0 0 62%;width:62%;min-width:0;scroll-snap-align:center;border-radius:16px;box-shadow:var(--sombra);background:#fff;height:auto}
-
+ 
   /* Garantia */
   .garantia{display:flex;gap:16px;align-items:center;margin-top:30px}
   .garantia .selo7{flex:none;width:84px;height:84px;border-radius:50%;background:var(--verde);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;font-weight:800;line-height:1;box-shadow:0 0 0 5px #E1EFE7}
   .garantia .selo7 b{font-size:28px}
   .garantia .selo7 small{font-size:13px;margin-top:2px}
   .garantia p{margin:0;font-size:16px}
-
+ 
   /* FAQ */
   .faq h2{font-size:24px;text-align:center;margin:34px 0 14px}
   .faq details{background:#fff;border-radius:16px;box-shadow:var(--sombra);margin-bottom:10px;overflow:hidden}
@@ -217,22 +239,22 @@
   .faq summary::after{content:"+";position:absolute;right:16px;top:50%;transform:translateY(-50%);font-size:24px;color:var(--acao);font-weight:700}
   .faq details[open] summary::after{content:"–"}
   .faq details p{padding:0 16px 16px;color:var(--txt2);margin:0}
-
+ 
   .cta-final{margin-top:26px}
   .refazer{display:block;text-align:center;margin:22px auto 0;color:var(--txt2);font-size:14px;text-decoration:underline}
-
+ 
   /* Sticky */
   .sticky{position:fixed;left:0;right:0;bottom:0;z-index:20;background:rgba(250,247,252,.97);border-top:1px solid var(--lav2);box-shadow:0 -6px 20px rgba(58,30,92,.08);padding:10px 16px calc(10px + env(safe-area-inset-bottom));transform:translateY(110%);transition:transform .3s ease}
   .sticky.on{transform:none}
   .sticky .in{max-width:480px;margin:0 auto;display:flex;align-items:center;gap:12px}
   .sticky .pr{flex:none;font-family:"Fraunces",Georgia,serif;font-size:26px;color:var(--noite);font-weight:600}
   .sticky .btn{min-height:52px;font-size:16px;box-shadow:none}
-
+ 
   /* Rodapé */
   .rodape{max-width:480px;margin:0 auto;padding:26px 16px 30px;text-align:center;font-size:13px;color:var(--txt2);border-top:1px solid var(--lav2)}
   .rodape p{margin-bottom:8px}
   .rodape a{color:var(--txt2)}
-
+ 
   @media (max-width:360px){
     .capa h1{font-size:30px}
     .pergunta h2,.nomes h2{font-size:23px}
@@ -245,7 +267,7 @@
 </head>
 <body>
 <noscript><img height="1" width="1" style="display:none" alt="" src="https://www.facebook.com/tr?id=1266411457564358&ev=PageView&noscript=1"></noscript>
-
+ 
 <header class="topo">
   <span class="estrela" style="top:10px;left:8%"></span>
   <span class="estrela" style="top:30px;left:20%"></span>
@@ -258,7 +280,7 @@
     <span id="marcaNome">Mapa do Sono do Bebê</span>
   </div>
 </header>
-
+ 
 <div class="progresso" id="progresso" hidden>
   <button class="voltar" id="btnVoltar" type="button" aria-label="Voltar">‹</button>
   <div class="prog-info">
@@ -266,9 +288,9 @@
     <div class="barra"><div class="barra-fill" id="barraFill"></div></div>
   </div>
 </div>
-
+ 
 <main class="app">
-
+ 
   <!-- CAPA -->
   <section class="tela ativa capa" id="tela-capa">
     <svg class="lua-grande" viewBox="0 0 100 100" aria-hidden="true">
@@ -278,18 +300,19 @@
     </svg>
     <div style="margin-top:14px"><span class="selo">Teste gratuito • 1 minuto</span></div>
     <h1>Por que o seu bebê não dorme?</h1>
-    <p class="sub">Responda 8 perguntas rápidas e descubra o que está travando o sono do seu bebê, e o que fazer ainda hoje à noite.</p>
+    <p class="sub">Responda 10 perguntas rápidas e descubra o que está travando o sono do seu bebê, e o que fazer ainda hoje à noite.</p>
     <button class="btn" id="btnComecar" type="button">Começar o teste</button>
     <a href="#" class="link-sec" id="btnRecomecar" hidden>Começar do zero</a>
     <p class="linha-mae">Feito de mãe pra mãe. Sem deixar chorar, sem regra impossível.</p>
   </section>
-
+ 
   <!-- PERGUNTAS DE MÚLTIPLA ESCOLHA -->
   <section class="tela pergunta" id="tela-pergunta">
+    <span class="selo selo-pilar" id="pPilar" hidden></span>
     <h2 id="pTitulo"></h2>
     <div class="opcoes" id="pOpcoes"></div>
   </section>
-
+ 
   <!-- PERGUNTA DOS NOMES -->
   <section class="tela nomes" id="tela-nomes">
     <h2>Como vocês se chamam?</h2>
@@ -313,12 +336,24 @@
       <button class="btn" id="btnNomes" type="button">Continuar</button>
     </form>
   </section>
-
+ 
+  <!-- PONTE: apresenta os 3 pilares antes do gráfico e do vídeo -->
+  <section class="tela ponte" id="tela-ponte">
+    <h2 id="ptTitulo"></h2>
+    <p class="pt-sub">É nessa ordem que o corpo do bebê sai do alerta e consegue dormir:</p>
+    <ol class="pt-lista">
+      <li><span class="n">1</span><b>Sair do estado de alerta</b><span class="pt-st"></span></li>
+      <li><span class="n">2</span><b>Reconhecer a hora de dormir</b><span class="pt-st"></span></li>
+      <li><span class="n">3</span><b id="ptP3">Se sentir seguro pra desligar</b><span class="pt-st"></span></li>
+    </ol>
+    <button class="btn incompleto" id="btnPonte" type="button">Ver a análise</button>
+  </section>
+ 
   <!-- GRÁFICO -->
   <section class="tela grafico" id="tela-grafico">
     <h2 id="gTitulo"></h2>
     <div class="grafico-box">
-      <svg id="gSvg" viewBox="0 0 340 214" role="img" aria-label="Gráfico: hoje a chance está baixa, em 'Pode ser um dia'">
+      <svg id="gSvg" viewBox="0 0 340 196" role="img" aria-label="Gráfico: hoje a chance está em 'Pouco provável'">
         <defs>
           <linearGradient id="gGrad" x1="0" y1="0" x2="1" y2="0">
             <stop offset="0" stop-color="#E0453A"/>
@@ -327,22 +362,19 @@
           </linearGradient>
         </defs>
         <g id="gGrade"></g>
-        <path id="gArea" fill="url(#gGrad)" fill-opacity=".5"/>
+        <path id="gArea" fill="url(#gGrad)" fill-opacity=".45"/>
         <path id="gLinha" fill="none" stroke="url(#gGrad)" stroke-width="4" stroke-linecap="round" pathLength="1" stroke-dasharray="1"/>
-        <g class="p1"><circle cx="40" cy="162" r="11" fill="#9A9AA6" fill-opacity=".25"/><circle cx="40" cy="162" r="6" fill="#D33A30"/></g>
-        <g class="p2"><circle cx="181" cy="130" r="12" fill="#9A9AA6" fill-opacity=".25"/><circle cx="181" cy="130" r="7" fill="#E8A915"/></g>
-        <g class="p3"><circle cx="322" cy="34" r="11" fill="#9A9AA6" fill-opacity=".25"/><circle cx="322" cy="34" r="6" fill="#2EAE5E"/></g>
-        <g class="voce"><rect x="157" y="94" width="48" height="24" rx="7" fill="#F5B82E"/><text class="voce-txt" x="181" y="111" text-anchor="middle">Você</text></g>
+        <g id="gPontos"></g>
+        <g class="voce" id="gVoce"><rect width="52" height="26" rx="8" fill="#F5B82E"/><text class="voce-txt" x="26" y="18" text-anchor="middle">Você</text></g>
       </svg>
     </div>
     <p class="g-pergunta" id="gPergunta"></p>
-    <p class="g-sub">No próximo passo você vê o seu resultado completo e o que fazer ainda hoje à noite.</p>
-    <button class="btn" id="btnGrafico" type="button">Com certeza, quero ver!</button>
+    <button class="btn" id="btnGrafico" type="button">Ver o meu resultado</button>
   </section>
-
+ 
   <!-- ANÁLISE + VSL + RESULTADO (tudo na mesma tela, para o vídeo não parar) -->
   <section class="tela resultado" id="tela-resultado">
-
+ 
     <div class="analise-box" id="analiseBox" aria-live="polite">
       <div class="analise-linha">
         <svg viewBox="0 0 100 100" aria-hidden="true">
@@ -355,10 +387,10 @@
       <div class="carga"><div class="carga-fill" id="cargaFill"></div></div>
       <button type="button" class="btn-ver" id="btnVerResultado" hidden>Ver o meu resultado 👇</button>
     </div>
-
+ 
     <p class="chamada-video" id="chamadaVideo"></p>
     <div class="vsl" id="vsl"></div>
-
+ 
     <div class="resultado-bloco" id="resultadoBloco" hidden>
       <span class="selo">SEU RESULTADO</span>
       <h1 id="resTitulo"></h1>
@@ -366,20 +398,20 @@
       <div class="passos" id="resPassos">
         <h3 id="passosTitulo">Os 3 pilares do sono</h3>
         <ol>
-          <li data-p="1"><span class="n">1</span><div><b>Sai do estado de alerta</b><span class="trava">Onde trava hoje</span></div></li>
-          <li data-p="2"><span class="n">2</span><div><b>Reconhece os sinais de que é hora de dormir</b><span class="trava">Onde trava hoje</span></div></li>
-          <li data-p="3"><span class="n">3</span><div><b id="passo3">Se sente seguro pra desligar</b><span class="trava">Onde trava hoje</span></div></li>
+          <li data-p="1"><span class="n">1</span><div><b>Sai do estado de alerta</b><small class="motivo"></small></div><span class="tag"></span></li>
+          <li data-p="2"><span class="n">2</span><div><b>Reconhece a hora de dormir</b><small class="motivo"></small></div><span class="tag"></span></li>
+          <li data-p="3"><span class="n">3</span><div><b id="passo3">Se sente seguro pra desligar</b><small class="motivo"></small></div><span class="tag"></span></li>
         </ol>
         <p class="passos-nota" id="passosNota"></p>
       </div>
     </div>
-
+ 
     <!-- OFERTA (aparece conforme VSL_DELAY_OFERTA_SEGUNDOS) -->
     <div id="ofertaWrap" hidden>
       <div class="oferta" id="oferta">
         <h2 id="ofertaTitulo">Seu Plano do Sono está pronto</h2>
         <p class="sub" id="ofertaSub"></p>
-
+ 
         <div class="card">
           <ul class="lista">
             <li><span>🧭</span><span>Os 3 pilares em guias visuais, para as sonecas e para a noite</span></li>
@@ -387,31 +419,31 @@
             <li><span>📱</span><span>No celular, para aplicar hoje à noite</span></li>
           </ul>
         </div>
-
+ 
         <div class="bonus-wrap" id="bonusWrap" hidden>
           <h3>🎁 E para facilitar ainda mais a sua rotina, você recebe estes bônus:</h3>
           <ul id="bonusLista"></ul>
         </div>
-
+ 
         <div class="preco">
           <div class="de">De <s data-ancora>R$97</s> por</div>
           <div class="valor" data-preco>R$32</div>
         </div>
-
+ 
         <a class="btn js-checkout" id="ctaPrincipal" href="#">Quero o meu Plano do Sono</a>
         <p class="micro">Acesso imediato no seu celular • 7 dias de garantia</p>
       </div>
-
+ 
       <div class="depo" id="depoimentos" hidden>
         <h2>Mães que aplicaram</h2>
         <div class="carrossel" id="carrossel"></div>
       </div>
-
+ 
       <div class="card garantia">
         <div class="selo7"><b>7</b><small>dias</small></div>
         <p>Aplique com o seu bebê. Se não sentir diferença, peça o reembolso em até 7 dias e devolvemos 100%.</p>
       </div>
-
+ 
       <div class="faq">
         <h2>Dúvidas comuns</h2>
         <details><summary>Vou ter que deixar meu bebê chorando?</summary><p>Não. O método é gentil e respeita o ritmo do seu bebê.</p></details>
@@ -420,23 +452,23 @@
         <details><summary>Como recebo?</summary><p>O acesso chega no seu e-mail logo após a compra e abre no celular.</p></details>
         <details><summary>Tem que assistir aula?</summary><p>Não. São guias visuais, rápidos de consultar.</p></details>
       </div>
-
+ 
       <div class="cta-final">
         <a class="btn js-checkout" href="#">Quero o meu Plano do Sono</a>
         <p class="micro">Acesso imediato no seu celular • 7 dias de garantia</p>
       </div>
     </div>
-
+ 
   </section>
 </main>
-
+ 
 <div class="sticky" id="sticky" aria-hidden="true">
   <div class="in">
     <div class="pr" data-preco>R$32</div>
     <a class="btn js-checkout" href="#" tabindex="-1">Quero o meu Plano</a>
   </div>
 </div>
-
+ 
 <script>
 /* =====================================================
    CONFIG — tudo que você precisa editar está aqui
@@ -468,10 +500,10 @@ const CONFIG = {
   NOME_MARCA: "Mapa do Sono do Bebê",
   EMAIL_SUPORTE: "{{email}}"
 };
-
+ 
 (function () {
   'use strict';
-
+ 
   /* ---------- utilidades ---------- */
   function $(id) { return document.getElementById(id); }
   function $$(sel) { return Array.prototype.slice.call(document.querySelectorAll(sel)); }
@@ -482,7 +514,7 @@ const CONFIG = {
     del: function (k) { try { window.localStorage.removeItem(k); } catch (e) {} }
   };
   function copiar(destino, origem) { for (var k in origem) { if (Object.prototype.hasOwnProperty.call(origem, k)) destino[k] = origem[k]; } return destino; }
-
+ 
   /* ---------- Pixel da Meta ---------- */
   var pixelOn = false;
   if (preenchido(CONFIG.PIXEL_ID)) {
@@ -497,7 +529,7 @@ const CONFIG = {
     if (!pixelOn || typeof window.fbq !== 'function') return;
     try { dados ? window.fbq(tipo, nome, dados) : window.fbq(tipo, nome); } catch (e) {}
   }
-
+ 
   /* ---------- Back redirect (UTMify) ----------
      Ao apertar "voltar" do navegador, manda para BACK_REDIRECT_URL levando as UTMs.
      O botão "‹" do quiz não é afetado (ele não usa o histórico do navegador). */
@@ -514,7 +546,7 @@ const CONFIG = {
       });
     } catch (e) {}
   }
-
+ 
   /* ---------- Teste A/B ---------- */
   function sortearVariante() {
     if (!CONFIG.TESTE_AB_ATIVO) return 'A';
@@ -528,7 +560,7 @@ const CONFIG = {
   var V = VARIANTE === 'B'
     ? { url: CONFIG.CHECKOUT_URL_B, preco: CONFIG.PRECO_B, valor: CONFIG.VALOR_B || 37 }
     : { url: CONFIG.CHECKOUT_URL_A, preco: CONFIG.PRECO_A, valor: CONFIG.VALOR_A || 32 };
-
+ 
   /* ---------- Estado ---------- */
   var state = { passo: 0, r: {}, fim: false };
   function salvar() { LS.set('msb_quiz2', JSON.stringify(state)); }
@@ -537,7 +569,7 @@ const CONFIG = {
     if (!bruto) return null;
     try { var s = JSON.parse(bruto); return (s && typeof s === 'object' && s.r) ? s : null; } catch (e) { return null; }
   }
-
+ 
   /* ---------- Personalização por nome e gênero ----------
      Marcadores usados nos textos:
      {M} nome da mãe • {N} nome do bebê • {o}/{O} artigo (o/a) • {do} do/da
@@ -547,7 +579,7 @@ const CONFIG = {
     return {
       M: r.mae || 'Mamãe', N: r.bebe || 'bebê',
       o: f ? 'a' : 'o', O: f ? 'A' : 'O', 'do': f ? 'da' : 'do',
-      ele: f ? 'ela' : 'ele', Ele: f ? 'Ela' : 'Ele', dele: f ? 'dela' : 'dele', oa: f ? 'a' : 'o'
+      ele: f ? 'ela' : 'ele', Ele: f ? 'Ela' : 'Ele', dele: f ? 'dela' : 'dele', oa: f ? 'a' : 'o', OA: f ? 'A' : 'O'
     };
   }
   function fmt(s) {
@@ -560,7 +592,7 @@ const CONFIG = {
     if (!w) return '';
     return w.charAt(0).toUpperCase() + w.slice(1).toLowerCase();
   }
-
+ 
   /* ---------- Conteúdo do quiz ---------- */
   var PERGUNTAS = [
     { t: 'É o seu primeiro filho?', o: [
@@ -585,6 +617,12 @@ const CONFIG = {
       { e: '😣', t: 'Demora muito, chora e luta contra o sono', v: { dor: 'LUTA' } },
       { e: '😴', t: 'Dorme sozinh{oa}, mas acorda logo', v: { dor: 'ACORDA' } }
     ]},
+    { t: 'Na hora de dormir, como {o} {N} fica?', pilar: 'PILAR 1 — SAIR DO ESTADO DE ALERTA', o: [
+      { e: '😫', t: 'Agitad{oa}, se mexendo e se debatendo', v: { p1: 'Fica agitad{oa} na hora de dormir' } },
+      { e: '🥱', t: 'Boceja e esfrega os olhos, mas não apaga', v: { p1: 'Mostra sono, mas não consegue apagar' } },
+      { e: '😭', t: 'Chora de cansaço', v: { p1: 'Chora de cansaço antes de dormir' } },
+      { e: '😌', t: 'Fica calm{oa} e relaxad{oa}', v: { p1: '' } }
+    ]},
     { t: 'Quantas vezes {o} {N} acorda durante a noite?', o: [
       { e: '🌙', t: '1 a 2 vezes', v: { chipAcorda: 'Acorda 1 a 2 vezes por noite' } },
       { e: '🌗', t: '3 a 4 vezes', v: { chipAcorda: 'Acorda 3 a 4 vezes por noite' } },
@@ -597,11 +635,16 @@ const CONFIG = {
       { e: '😌', t: 'Mais de 1 hora', v: { sonecaCurta: false } },
       { e: '🙅‍♀️', t: '{Ele} quase não tira soneca', v: { sonecaCurta: true } }
     ]},
-    { t: 'O que acontece quando você coloca {o} {N} no berço?', o: [
-      { e: '😩', t: 'Acorda na hora e começa tudo de novo', v: { bercoFalha: true } },
-      { e: '⏳', t: 'Aguenta um pouco e depois acorda', v: { bercoFalha: false } },
-      { e: '🛏️', t: 'Dorme no berço sem problema', v: { bercoFalha: false } },
-      { e: '🫶', t: '{Ele} não dorme no berço, só comigo', v: { bercoFalha: false } }
+    { t: 'Antes de dormir, vocês fazem sempre a mesma coisa?', pilar: 'PILAR 2 — RECONHECER A HORA DE DORMIR', o: [
+      { e: '🔀', t: 'Não, cada dia é de um jeito', v: { p2: 'Cada noite é de um jeito' } },
+      { e: '🤷‍♀️', t: 'Às vezes', v: { p2: 'O antes de dormir muda bastante' } },
+      { e: '🔁', t: 'Sim, quase sempre igual', v: { p2: '' } }
+    ]},
+    { t: 'O que acontece quando você coloca {o} {N} no berço?', pilar: 'PILAR 3 — SE SENTIR SEGUR{OA} PRA DESLIGAR', o: [
+      { e: '😩', t: 'Acorda na hora e começa tudo de novo', v: { bercoFalha: true, p3: 'Acorda quando vai pro berço' } },
+      { e: '⏳', t: 'Aguenta um pouco e depois acorda', v: { bercoFalha: false, p3: 'Acorda pouco depois de ir pro berço' } },
+      { e: '🛏️', t: 'Dorme no berço sem problema', v: { bercoFalha: false, p3: '' } },
+      { e: '🫶', t: '{Ele} não dorme no berço, só comigo', v: { bercoFalha: false, p3: 'Só dorme com você' } }
     ]},
     { t: 'Há quanto tempo você não dorme uma noite inteira, {M}?', o: [
       { e: '🌙', t: 'Alguns dias', v: { tempo: 'dias', chipTempo: 'Mãe sem dormir há dias' } },
@@ -611,7 +654,7 @@ const CONFIG = {
       { e: '🥱', t: 'Nem lembro mais', v: { tempo: 'nemlembra', chipTempo: 'Mãe sem dormir há tanto tempo que nem lembra' } }
     ]}
   ];
-
+ 
   var TEMPO = {
     dias: 'Há dias você não dorme uma noite inteira.',
     semanas: 'Há semanas você não dorme uma noite inteira.',
@@ -619,33 +662,33 @@ const CONFIG = {
     nasceu: 'Desde que {o} {N} nasceu, você não dorme uma noite inteira.',
     nemlembra: 'Você nem lembra a última vez que dormiu uma noite inteira.'
   };
-
+ 
   var DORES = {
     MAMANDO: {
       texto: '{O} {N} aprendeu que só consegue desligar mamando. Não é fome: hoje mamar é a única coisa que tira o corpo {dele} do alerta. Por isso você passa a noite dando de mamar.',
-      meta: 'pegar no sono sem precisar mamar',
+      meta: 'dormir sem precisar mamar',
       passo: 3, curta: 'pegar no sono sem precisar mamar'
     },
     COLO: {
       texto: 'Hoje {o} {N} só se sente segur{oa} para desligar grudad{oa} em você: no colo, balançando ou com você do lado. Por isso, quando vai pro berço ou você sai de perto, {ele} acorda e começa tudo de novo.',
-      meta: 'dormir no berço sem precisar de colo ou balanço',
+      meta: 'dormir no berço, sem colo',
       passo: 3, curta: 'dormir no berço sem precisar de colo ou balanço'
     },
     LUTA: {
       texto: '{O} {N} chega na hora de dormir com o corpo acelerado. Está cansad{oa}, mas não consegue desligar, e por isso chora e luta contra o sono.',
-      meta: 'pegar no sono sem chorar e lutar contra o sono',
+      meta: 'dormir sem chorar e lutar contra o sono',
       passo: 1, curta: 'parar de lutar contra o sono'
     },
     ACORDA: {
       texto: '{O} {N} até pega no sono, mas o corpo não sustenta o descanso. Por isso {ele} acorda depois de poucos minutos, ou várias vezes na madrugada.',
-      meta: 'dormir sem acordar a cada pouco',
+      meta: 'dormir sem acordar toda hora',
       passo: 2, curta: 'parar de acordar a cada pouco'
     }
   };
   function dorAtual() { return DORES[state.r.dor] ? state.r.dor : 'LUTA'; }
-
+ 
   /* ---------- Telas ---------- */
-  var TELAS = ['capa', 'pergunta', 'nomes', 'grafico', 'resultado'];
+  var TELAS = ['capa', 'pergunta', 'nomes', 'ponte', 'grafico', 'resultado'];
   function mostrarTela(nome) {
     TELAS.forEach(function (t) { $('tela-' + t).classList.remove('ativa'); });
     var el = $('tela-' + nome);
@@ -654,15 +697,17 @@ const CONFIG = {
     $('progresso').hidden = !(nome === 'pergunta' || nome === 'nomes');
     try { window.scrollTo(0, 0); } catch (e) {}
   }
-
+ 
   function mostrarPergunta(i) {
     state.passo = i;
     var q = PERGUNTAS[i];
     $('progTexto').textContent = 'Pergunta ' + (i + 1) + ' de ' + PERGUNTAS.length;
     $('barraFill').style.width = ((i + 1) / PERGUNTAS.length * 100) + '%';
-
+ 
     if (q.tipo === 'nomes') { prepararNomes(); mostrarTela('nomes'); return; }
-
+ 
+    $('pPilar').hidden = !q.pilar;
+    $('pPilar').textContent = q.pilar ? fmt(q.pilar) : '';
     $('pTitulo').textContent = fmt(q.t);
     var box = $('pOpcoes');
     box.innerHTML = '';
@@ -714,15 +759,15 @@ const CONFIG = {
     }
     mostrarTela('pergunta');
   }
-
+ 
   function avancar(i) {
     track('trackCustom', 'QuizStep', { step: i + 1 });
     state.passo = i + 1;
     salvar();
     if (i + 1 < PERGUNTAS.length) mostrarPergunta(i + 1);
-    else mostrarGrafico();
+    else mostrarPonte();
   }
-
+ 
   var travado = false;
   function responder(i, op, btn) {
     if (travado) return;
@@ -731,7 +776,7 @@ const CONFIG = {
     btn.classList.add('marcada');
     setTimeout(function () { travado = false; avancar(i); }, 260);
   }
-
+ 
   /* ---------- Nomes ---------- */
   var sexoSel = '';
   // O botão nunca fica desativado: se faltar algo, ele mostra o que falta.
@@ -782,40 +827,60 @@ const CONFIG = {
   // Avança pelo clique (não depende de "submit" de formulário, que alguns navegadores/visualizadores bloqueiam)
   $('btnNomes').addEventListener('click', enviarNomes);
   $('formNomes').addEventListener('submit', function (e) { e.preventDefault(); enviarNomes(); });
-
+ 
   /* ---------- Gráfico ---------- */
   (function montarGrafico() {
-    var X0 = 40, X1 = 322, YB = 178;
-    function Y(v) { return YB - 1.6 * v; }
-    var ns = 'http://www.w3.org/2000/svg', g = $('gGrade');
-    function el(tag, at, txt) { var n = document.createElementNS(ns, tag); for (var k in at) n.setAttribute(k, at[k]); if (txt) n.textContent = txt; g.appendChild(n); }
-    [0, 25, 50, 75, 100].forEach(function (v) {
-      el('line', { x1: X0, x2: X1, y1: Y(v), y2: Y(v), 'class': 'grade' });
-      el('text', { x: 30, y: Y(v) + 4, 'text-anchor': 'end', 'class': 'eixo' }, String(v));
+    var YB = 156, XS = [36, 122, 210, 294], ROT = ['Nenhuma', 'Pouco provável', 'Provável', 'Com certeza'];
+    var COR = ['#D33A30', '#E8901A', '#9BBF3A', '#2EAE5E'];
+    function Y(v) { return YB - 1.3 * v; }
+    function V(t) { return 8 + 84 * t * t; }
+    var ns = 'http://www.w3.org/2000/svg';
+    function el(par, tag, at, txt) { var n = document.createElementNS(ns, tag); for (var k in at) n.setAttribute(k, at[k]); if (txt) n.textContent = txt; par.appendChild(n); return n; }
+    var g = $('gGrade'), gp = $('gPontos');
+    el(g, 'line', { x1: XS[0], x2: XS[3], y1: YB, y2: YB, 'class': 'grade' });
+    XS.forEach(function (x, i) {
+      el(g, 'line', { x1: x, x2: x, y1: Y(100), y2: YB, 'class': 'grade' });
+      el(g, 'text', { x: x, y: 182, 'text-anchor': 'middle', 'class': 'eixo-x' + (i === 1 ? ' eixo-voce' : '') }, ROT[i]);
+      var y = Y(V(i / 3)), grp = el(gp, 'g', { 'class': 'p' + (i + 1) });
+      el(grp, 'circle', { cx: x, cy: y, r: i === 1 ? 12 : 10, fill: '#9A9AA6', 'fill-opacity': '.22' });
+      el(grp, 'circle', { cx: x, cy: y, r: i === 1 ? 7 : 5.5, fill: COR[i] });
     });
-    [X0, (X0 + X1) / 2, X1].forEach(function (x) { el('line', { x1: x, x2: x, y1: Y(100), y2: YB, 'class': 'grade' }); });
-    el('text', { x: 20, y: 204, 'text-anchor': 'start', 'class': 'eixo-x' }, 'Nenhuma');
-    el('text', { x: (X0 + X1) / 2, y: 204, 'text-anchor': 'middle', 'class': 'eixo-x' }, 'Pode ser um dia');
-    el('text', { x: 338, y: 204, 'text-anchor': 'end', 'class': 'eixo-x' }, 'Com certeza');
     var d = '';
     for (var i = 0; i <= 40; i++) {
-      var t = i / 40, x = X0 + (X1 - X0) * t, y = Y(10 + 80 * t * t);
-      d += (i ? ' L' : 'M') + x.toFixed(1) + ' ' + y.toFixed(1);
+      var t = i / 40, x = XS[0] + (XS[3] - XS[0]) * t;
+      d += (i ? ' L' : 'M') + x.toFixed(1) + ' ' + Y(V(t)).toFixed(1);
     }
     $('gLinha').setAttribute('d', d);
-    $('gArea').setAttribute('d', d + ' L' + X1 + ' ' + YB + ' L' + X0 + ' ' + YB + ' Z');
+    $('gArea').setAttribute('d', d + ' L' + XS[3] + ' ' + YB + ' L' + XS[0] + ' ' + YB + ' Z');
+    $('gVoce').setAttribute('transform', 'translate(' + (XS[1] - 26) + ',' + (Y(V(1 / 3)) - 46) + ')');
   })();
-
+ 
+  var ponteTimer = [], ponteOk = false;
+  function mostrarPonte() {
+    state.passo = PERGUNTAS.length;
+    salvar();
+    $('ptTitulo').textContent = fmt('{M}, analisamos os 3 pilares do sono {do} {N}');
+    $('ptP3').textContent = fmt('Se sentir segur{oa} pra desligar');
+    var lis = $$('#tela-ponte .pt-lista li');
+    lis.forEach(function (li) { li.classList.remove('feito'); });
+    ponteOk = false; $('btnPonte').classList.add('incompleto');
+    ponteTimer.forEach(clearTimeout); ponteTimer = [];
+    mostrarTela('ponte');
+    lis.forEach(function (li, k) { ponteTimer.push(setTimeout(function () { li.classList.add('feito'); }, 600 + k * 700)); });
+    ponteTimer.push(setTimeout(function () { ponteOk = true; $('btnPonte').classList.remove('incompleto'); }, 600 + lis.length * 700));
+  }
+  $('btnPonte').addEventListener('click', function () { if (ponteOk) mostrarGrafico(); });
+ 
   function mostrarGrafico() {
     state.passo = PERGUNTAS.length;
     salvar();
-    $('gTitulo').textContent = fmt('{M}, veja as chances de, do jeito que está hoje, {o} {N} ' + DORES[dorAtual()].meta);
-    $('gPergunta').textContent = fmt('Quer mudar isso mais rápido, {M}?');
+    $('gTitulo').textContent = fmt('{M}, pelas suas respostas, veja a chance de {o} {N} ' + DORES[dorAtual()].meta);
+    $('gPergunta').textContent = fmt('Hoje está em "pouco provável". Mas isso muda quando você sabe o que fazer.');
     mostrarTela('grafico');
     var svg = $('gSvg');
     svg.classList.remove('anim'); void svg.getBoundingClientRect(); svg.classList.add('anim');
   }
-
+ 
   /* ---------- Análise: a VSL toca enquanto a barra enche ---------- */
   var analiseTimer = null;
   function iniciarAnalise() {
@@ -828,7 +893,7 @@ const CONFIG = {
     $('chamadaVideo').textContent = fmt('Enquanto o seu resultado fica pronto, assista: como tirar o corpo {do} {N} do alerta antes de dormir 👇');
     fill.style.width = '0%'; pct.textContent = '0%';
     mostrarTela('resultado');
-
+ 
     var total = Math.max(3, Number(CONFIG.ANALISE_SEGUNDOS) || 40) * 1000;
     var etapas = [
       [0, 'Analisando as suas respostas…'],
@@ -851,7 +916,7 @@ const CONFIG = {
       }
     }, 200);
   }
-
+ 
   function marcarAnalisePronta() {
     $('analiseBox').classList.add('pronto');
     $('cargaFill').style.width = '100%';
@@ -860,13 +925,13 @@ const CONFIG = {
     $('btnVerResultado').hidden = false;
     $('chamadaVideo').textContent = fmt('Continue assistindo: como tirar o corpo {do} {N} do alerta antes de dormir 👇');
   }
-
+ 
   /* ---------- Resultado ---------- */
   function prepararResultado() {
     var r = state.r, dor = dorAtual(), D = DORES[dor];
-
+ 
     $('resTitulo').textContent = fmt('{M}, o corpo {do} {N} está preso no estado de alerta');
-
+ 
     // Dor da mãe + causa, num bloco só
     var dm = $('resDorMae');
     dm.innerHTML = '';
@@ -877,39 +942,53 @@ const CONFIG = {
     if (r.bercoFalha && dor !== 'COLO') t += ' É também por isso que o berço não funciona.';
     else if (r.sonecaCurta) t += ' E as sonecas curtas são o mesmo padrão durante o dia.';
     dm.appendChild(document.createTextNode(t));
-
+ 
     $('passosTitulo').textContent = fmt('Os 3 pilares do sono {do} {N}');
     $('passo3').textContent = fmt('Se sente segur{oa} pra desligar');
-    $$('#resPassos li').forEach(function (li) { li.classList.toggle('alvo', Number(li.getAttribute('data-p')) === D.passo); });
+    // Diagnóstico de cada pilar a partir das respostas
+    var mot = { 1: r.p1 || (dor === 'LUTA' ? 'Luta contra o sono' : ''), 2: r.p2 || '', 3: r.p3 || '' };
+    if (!mot[3] && dor === 'MAMANDO') mot[3] = 'Só pega no sono mamando';
+    if (!mot[3] && dor === 'COLO') mot[3] = 'Só pega no sono grudad{oa} em você';
+    var trav = [1, 2, 3].filter(function (k) { return !!mot[k]; });
+    if (!trav.length) {
+      trav = [D.passo];
+      mot[D.passo] = { MAMANDO: 'Só pega no sono mamando', COLO: 'Só pega no sono grudad{oa} em você', LUTA: 'Luta contra o sono', ACORDA: 'Pega no sono, mas acorda logo' }[dor];
+    }
+    $$('#resPassos li').forEach(function (li) {
+      var k = Number(li.getAttribute('data-p')), t = trav.indexOf(k) !== -1;
+      li.classList.toggle('alvo', t); li.classList.toggle('ok', !t);
+      li.querySelector('.motivo').textContent = t ? fmt(mot[k] || '') : 'Tudo certo aqui';
+      li.querySelector('.tag').textContent = t ? 'Travado' : 'OK';
+    });
     var nota = $('passosNota');
     nota.innerHTML = '';
-    nota.appendChild(document.createTextNode(D.passo === 1
-      ? fmt('Hoje {o} {N} trava logo no pilar 1, e sem ele os outros dois não acontecem. ')
-      : fmt('Hoje {o} {N} trava no pilar ' + D.passo + '. Como um pilar depende do outro, o plano começa pelo 1. ')));
+    nota.appendChild(document.createTextNode(trav[0] === 1
+      ? fmt('Hoje {o} {N} trava logo no pilar 1, e sem ele os outros não acontecem. ')
+      : fmt('Hoje {o} {N} trava no pilar ' + trav[0] + '. Como um pilar depende do outro, o plano passa pelos três, na ordem. ')));
     var nb = document.createElement('strong'); nb.textContent = 'Não é manha, e não é culpa sua: só faltava a ordem certa.';
     nota.appendChild(nb);
-
+ 
     $('ofertaTitulo').textContent = fmt('O Plano do Sono {do} {N} está pronto');
     var sub = $('ofertaSub');
     sub.innerHTML = '';
     sub.appendChild(document.createTextNode(fmt('Com o que fazer no caso {do} {N} para ')));
     var st = document.createElement('strong'); st.textContent = D.curta; sub.appendChild(st);
     sub.appendChild(document.createTextNode('.'));
-
+ 
     atualizarLinks();
     injetarVSL();
   }
-
+ 
   function revelarResultado(novo) {
     marcarAnalisePronta();
     $('resultadoBloco').hidden = false;
     if (novo) track('trackCustom', 'QuizComplete');
-
+ 
     var atraso = Number(CONFIG.VSL_DELAY_OFERTA_SEGUNDOS) || 0;
     if (atraso > 0 && LS.get('msb_oferta') !== '1') setTimeout(liberarOferta, atraso * 1000);
     else liberarOferta();
   }
-
+ 
   /* ---------- VSL ---------- */
   var vslPronto = false;
   function injetarVSL() {
@@ -937,7 +1016,7 @@ const CONFIG = {
       old.parentNode.replaceChild(s, old);
     });
   }
-
+ 
   /* ---------- Bônus ---------- */
   (function montarBonus() {
     var lista = $('bonusLista'), n = 0;
@@ -954,7 +1033,7 @@ const CONFIG = {
     });
     $('bonusWrap').hidden = n === 0;
   })();
-
+ 
   /* ---------- Oferta ---------- */
   var ofertaLiberada = false, viewContentEnviado = false;
   function liberarOferta() {
@@ -977,7 +1056,7 @@ const CONFIG = {
       io.observe(oferta);
     } else enviarVC();
   }
-
+ 
   function montarPrints() {
     if (!CONFIG.MOSTRAR_PRINTS || !CONFIG.PRINTS || !CONFIG.PRINTS.length) return;
     var car = $('carrossel');
@@ -990,7 +1069,7 @@ const CONFIG = {
     });
     $('depoimentos').hidden = false;
   }
-
+ 
   function ativarSticky() {
     var s = $('sticky'), cta = $('ctaPrincipal');
     function liga(on) {
@@ -1005,7 +1084,7 @@ const CONFIG = {
       }).observe(cta);
     } else liga(true);
   }
-
+ 
   /* ---------- Checkout com UTMs ---------- */
   function linkCheckout() {
     var base = V.url || '#';
@@ -1038,7 +1117,7 @@ const CONFIG = {
       setTimeout(function () { window.location.href = url; }, 300);
     });
   });
-
+ 
   /* ---------- Preços e textos do CONFIG ---------- */
   $$('[data-preco]').forEach(function (el) { el.textContent = V.preco; });
   $$('[data-ancora]').forEach(function (el) { el.textContent = CONFIG.PRECO_ANCORA; });
@@ -1046,7 +1125,7 @@ const CONFIG = {
   $$('[data-email]').forEach(function (el) { el.textContent = CONFIG.EMAIL_SUPORTE; });
   $('marcaNome').textContent = CONFIG.NOME_MARCA;
   atualizarLinks();
-
+ 
   /* ---------- Botões ---------- */
   function comecarDoZero() {
     state = { passo: 0, r: {}, fim: false };
@@ -1055,7 +1134,7 @@ const CONFIG = {
     mostrarPergunta(0);
   }
   $('btnComecar').addEventListener('click', function () {
-    if (!state.fim && state.passo >= PERGUNTAS.length) mostrarGrafico();
+    if (!state.fim && state.passo >= PERGUNTAS.length) mostrarPonte();
     else if (!state.fim && state.passo > 0) mostrarPergunta(state.passo);
     else comecarDoZero();
   });
@@ -1068,7 +1147,7 @@ const CONFIG = {
   $('btnVerResultado').addEventListener('click', function () {
     try { $('resultadoBloco').scrollIntoView({ behavior: 'smooth', block: 'start' }); } catch (e) { $('resultadoBloco').scrollIntoView(); }
   });
-
+ 
   /* ---------- Retomar de onde parou ---------- */
   var salvo = carregar();
   if (salvo) {
@@ -1086,3 +1165,4 @@ const CONFIG = {
 </script>
 </body>
 </html>
+ 
